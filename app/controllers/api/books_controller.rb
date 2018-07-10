@@ -15,7 +15,7 @@ class Api::BooksController < ApplicationController
     if book.save
       render json: book
     else
-      render json: product.errors, status: 442
+      render json: { errors: @api_book.errors.full_messages.join(',') }, status: 442
     end
   end
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
-import { isAuthenticated, logout } from '../FakeAuth';
+import { isAuthenticated, logout } from '../fakeAuth';
 
 const styles = {
   active: {
@@ -10,7 +10,7 @@ const styles = {
   }
 }
 
-conat additionalLinks = (history) => {
+const additionalLinks = (history) => {
   if (isAuthenticated()) {
     return (
       <span>
@@ -22,7 +22,7 @@ conat additionalLinks = (history) => {
         }}>
           Logout
         </a>
-      <span>
+      </span>
     )
   } else {
     return (
@@ -38,7 +38,7 @@ conat additionalLinks = (history) => {
           <NavLink activeStyle={styles.active} to="/about">About</NavLink>
           {' '}
           {additionalLinks(history)}
-          <NavLink activeStyle={styles.active} to="/AllBooks">All Books</NavLink>
+          <NavLink activeStyle={styles.active} to="/allbooks">All Books</NavLink>
         </nav>
       )
 
