@@ -6,12 +6,12 @@ class Book extends React.Component {
   state = { book: {}, edit: false }
 
   componentDidMount() {
-    axios.get(`/api/products/${this.props.match.params.id}`)
+    axios.get(`/api/books/${this.props.match.params.id}`)
         .then( res => this.setState({ book: res.data }) ) 
   }
 
   toggleEdit = () => {
-    this.setState(state => {
+    this.setState( state => {
       return { edit: !this.state.edit }
     });
   }
