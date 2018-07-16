@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Form from './Form';
-import { isAuthenticated } from '../fakeAuth';
+// import { isAuthenticated } from '../fakeAuth';
 
 class Dashboard extends React.Component {
   state = { books: [], showForm: false }
@@ -12,7 +12,7 @@ class Dashboard extends React.Component {
       .then(res => this.setState({ books: res.data }))
   }
 
-  render() {
+  show() {
     let { books } = this.state;
     return (
       <ul>
@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
         <div>
           <h2>Books</h2>
           <button onClick={this.toggleForm}>{showForm ? 'Hide' : 'Show'} form</button>
-          {showForm ? this.form() : this.show()}
+          { showForm ? this.form() : this.show() }
         </div>
       )
     };

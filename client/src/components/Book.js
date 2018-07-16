@@ -33,6 +33,7 @@ class Book extends React.Component {
       </div>
     )
   }
+  
 
   edit() {
     return <Form {...this.state.product} submit={this.submit} />
