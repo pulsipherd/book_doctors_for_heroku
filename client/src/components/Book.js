@@ -32,7 +32,7 @@ class Book extends React.Component {
             <h3>{author}</h3>
           </Grid.Column>
           <Grid.Column>
-            {/* <img class="ui fluid image" src="`{book_image}`"/> */}
+            <img class="ui fluid image" src={`${book_image}`}/>
           </Grid.Column>
         </Grid>
           <p>{blurb}</p>

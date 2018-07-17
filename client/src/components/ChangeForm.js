@@ -86,11 +86,9 @@ class ChangeForm extends React.Component {
         /><br />
         <label>URL of cover image </label>
         <input
-          type="url"
           id="book_image"
           value={book_image}
           onChange={this.handleChange}
-          accept="url"
         />
         <button>Submit</button>
       </form>

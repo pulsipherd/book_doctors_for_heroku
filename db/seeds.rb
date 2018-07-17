@@ -7,6 +7,7 @@ A short story about the universe.",
   difficulty: "College", 
   keywords: "Meaning of Life, Death, Kindness, Experience", 
   lessons: "Death, Confusion, Fear", 
+  book_image: "https://www.goodreads.com/book/photo/17563539-the-egg" 
    
 )
 
@@ -17,6 +18,7 @@ Book.create(
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: ""
     
 )
 
@@ -29,6 +31,7 @@ Allen has rewritten the book from start to finish, tweaking his classic text wit
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: "https://images.gr-assets.com/books/1312474060l/1633.jpg"
    
 )
 
@@ -43,6 +46,7 @@ Using the real-life stories of actual patients, Brain Lock explains this revolut
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: "",
    
 )
 
@@ -59,6 +63,7 @@ In Endurance, the definitive account of Ernest Shackleton's fateful trip, Alfred
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: "https://images.gr-assets.com/books/1391329559l/139069.jpg",
    
 )
 
@@ -69,16 +74,18 @@ Book.create(
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: "",
    
 )
 
 Book.create(
-  title: "Brilliant Stillness",
+  title: "Perfect Brilliant Stillness",
   author: "David Carse",
   blurb: "",
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: "",
    
 )
 
@@ -89,16 +96,18 @@ Book.create(
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: "",
    
 )
 
 Book.create(
   title: "The Enchanted Barn",
-  author: "",
+  author: "Grace Livingston Hill",
   blurb: "",
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: "",
    
 )
 
@@ -109,6 +118,7 @@ Book.create(
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: "",
    
 )
 
@@ -119,6 +129,7 @@ Book.create(
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: "https://images.gr-assets.com/books/1386920606l/16689.jpg",
    
 )
 
@@ -129,5 +140,6 @@ Book.create(
   difficulty: "",
   keywords: "",
   lessons: "",
+  book_image: "https://images.gr-assets.com/books/1388184360l/122.jpg",
    
 )

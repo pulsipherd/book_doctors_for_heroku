@@ -11,5 +11,18 @@
   "license": "ISC",
   "dependencies": {
     "semantic-ui-react": "^0.82.0"
-  }
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pulsipherd/BookDoctorsRepack2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pulsipherd/BookDoctorsRepack2/issues"
+  },
+  "homepage": "https://github.com/pulsipherd/BookDoctorsRepack2#readme"
 }

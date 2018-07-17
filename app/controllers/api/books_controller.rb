@@ -20,7 +20,7 @@ class Api::BooksController < ApplicationController
   end
 
   def update
-    if @product.update(product_params)
+    if @book.update(book_params)
       render json: @book
     else
       render json: @book.errors, status: 442
