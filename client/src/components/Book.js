@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ChangeForm from './ChangeForm';
-import { Header, Grid } from "semantic-ui-react"; 
+import { Header, Grid, Image } from "semantic-ui-react"; 
 
 class Book extends React.Component {
   state = { book: {}, edit: false }
@@ -23,16 +23,21 @@ class Book extends React.Component {
   }
 
   show() {
-    let { book: { title, author, blurb, difficulty, keywords, lessons }} = this.state;
+    let { book: { title, author, blurb, difficulty, keywords, lessons, book_image }} = this.state;
     return (
       <div>
-        <Grid>
-          <h1>{title}</h1>
-          <h3>{author}</h3>
+        <Grid columns={2}>
+          <Grid.Column>
+            <h1>{title}</h1>
+            <h3>{author}</h3>
+          </Grid.Column>
+          <Grid.Column>
+            {/* <img class="ui fluid image" src="`{book_image}`"/> */}
+          </Grid.Column>
+        </Grid>
           <p>{blurb}</p>
           <Header as='h4'>Difficulty: {difficulty}</Header>
           <Header as='h5' disabled>Keywords: {keywords} | Lessons: {lessons}</Header>
-        </Grid>
       </div>
     )
   }

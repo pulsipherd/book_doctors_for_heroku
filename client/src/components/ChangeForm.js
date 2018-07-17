@@ -5,7 +5,7 @@ class ChangeForm extends React.Component {
   defaultValues = {
     title: "Main Title: Subtitle, too, if it has one",
     author: "Author's First and Last Name",
-    blurb: "You can copy it from Amazon, GoodReads, or anywhere else, if you'd like.", 
+    blurb: "You can copy it from Amazon, GoodReads, or anywhere else, if you'd like. Just make sure you give credit where it's due! ('... according to http://...", 
   difficulty: "Children's, Young Adult, College?",
     keywords: "Where's it set? What are some of the topics?",
     lessons: "What are some of the struggles people have that this could help with?",
@@ -30,7 +30,7 @@ class ChangeForm extends React.Component {
   }
 
   render() {
-    let { title, author, blurb, difficulty, keywords, lessons } = this.state;
+    let { title, author, blurb, difficulty, keywords, lessons, book_image } = this.state;
     return (
       <form class="ui form" onSubmit={this.handleSubmit}>
         <label>Title</label>
@@ -51,7 +51,8 @@ class ChangeForm extends React.Component {
         /><br />
         <label>Teaser</label>
         <Form.TextArea
-          width="1000%"
+          width="100%"
+          rows="8"
           id="blurb"
           type="textBox"
           placeholder="blurb"
@@ -83,6 +84,14 @@ class ChangeForm extends React.Component {
           onChange={this.handleChange}
           required
         /><br />
+        <label>URL of cover image </label>
+        <input
+          type="url"
+          id="book_image"
+          value={book_image}
+          onChange={this.handleChange}
+          accept="url"
+        />
         <button>Submit</button>
       </form>
     )
