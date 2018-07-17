@@ -9,6 +9,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Book from './components/Book';
 import AllBooks from './components/AllBooks';
+import ChangeForm from './components/ChangeForm';
 
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
       <Route exact path="/about" component={About} />
       <Route path="/login" component={Login} />
       <Route path="/allbooks" component={AllBooks} />
+      <ProtectedRoute path="/ChangeForm" component={ChangeForm} />
       <ProtectedRoute path="/dashboard" component={Dashboard} />
       <ProtectedRoute path="/books/:id" component={Book} />
 

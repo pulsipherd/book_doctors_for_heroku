@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import Form from './Form';
+import ChangeForm from './ChangeForm';
+import { Header, Grid } from "semantic-ui-react"; 
 
 class Book extends React.Component {
   state = { book: {}, edit: false }
@@ -25,18 +26,20 @@ class Book extends React.Component {
     let { book: { title, author, blurb, difficulty, keywords, lessons }} = this.state;
     return (
       <div>
-        <h1>{title}</h1>
-        <h3>{author}</h3>
-        <p>{blurb}</p>
-        <h4>{difficulty}</h4>
-        <h5>{keywords} | {lessons}</h5>
+        <Grid>
+          <h1>{title}</h1>
+          <h3>{author}</h3>
+          <p>{blurb}</p>
+          <Header as='h4'>Difficulty: {difficulty}</Header>
+          <Header as='h5' disabled>Keywords: {keywords} | Lessons: {lessons}</Header>
+        </Grid>
       </div>
     )
   }
   
 
   edit() {
-    return <Form {...this.state.product} submit={this.submit} />
+    return <ChangeForm {...this.state.book} submit={this.submit} />
   }
 
   render() {

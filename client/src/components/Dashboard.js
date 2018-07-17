@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Form from './Form';
+import ChangeForm from './ChangeForm';
 // import { isAuthenticated } from '../fakeAuth';
 
 class Dashboard extends React.Component {
@@ -27,7 +27,7 @@ class Dashboard extends React.Component {
   
   
   form() {
-    return <Form submit={this.submit} />
+    return <ChangeForm submit={this.submit} />
   }
   submit = (book) => {
     let { books } = this.state

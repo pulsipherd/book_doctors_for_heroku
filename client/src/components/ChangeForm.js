@@ -1,6 +1,7 @@
 import React from 'react';
+import { Form } from 'semantic-ui-react';
 
-class Form extends React.Component {
+class ChangeForm extends React.Component {
   defaultValues = {
     title: "Main Title: Subtitle, too, if it has one",
     author: "Author's First and Last Name",
@@ -31,7 +32,8 @@ class Form extends React.Component {
   render() {
     let { title, author, blurb, difficulty, keywords, lessons } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form class="ui form" onSubmit={this.handleSubmit}>
+        <label>Title</label>
         <input
           id="title"
           placeholder="title"
@@ -39,6 +41,7 @@ class Form extends React.Component {
           onChange={this.handleChange}
           required
           /> <br />
+        <label>Author</label>
         <input
           id="author"
           placeholder="author"
@@ -46,13 +49,17 @@ class Form extends React.Component {
           onChange={this.handleChange}
           required
         /><br />
-        <input
+        <label>Teaser</label>
+        <Form.TextArea
+          width="1000%"
           id="blurb"
+          type="textBox"
           placeholder="blurb"
           value={blurb}
           onChange={this.handleChange}
           required
         /><br />
+        <label>Difficulty</label>
         <input
           id="difficulty"
           placeholder="difficulty"
@@ -60,6 +67,7 @@ class Form extends React.Component {
           onChange={this.handleChange}
           required
         /><br />
+        <label>Keywords</label>
         <input
           id="keywords"
           placeholder="keywords"
@@ -67,6 +75,7 @@ class Form extends React.Component {
           onChange={this.handleChange}
           required
         /><br />
+        <label>Lessons</label>
         <input
           id="lessons"
           placeholder="lessons"
@@ -80,4 +89,4 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default ChangeForm;
