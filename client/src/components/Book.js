@@ -30,12 +30,12 @@ class Book extends React.Component {
           <Grid.Column>
             <h1>{title}</h1>
             <h3>{author}</h3>
+            <p>{blurb}</p>
           </Grid.Column>
           <Grid.Column>
-            <img class="ui fluid image" src={`${book_image}`}/>
+            <Image src={book_image} height="400"/>
           </Grid.Column>
         </Grid>
-          <p>{blurb}</p>
           <Header as='h4'>Difficulty: {difficulty}</Header>
           <Header as='h5' disabled>Keywords: {keywords} | Lessons: {lessons}</Header>
       </div>

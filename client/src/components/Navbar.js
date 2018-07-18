@@ -1,45 +1,63 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { isAuthenticated, logout } from '../fakeAuth';
+import React, { Component } from "react";
+import { Menu } from "semantic-ui-react";
+import { connect } from "react-redux";
+import { handleLogout } from "../actions/auth";
+import { withRouter, Link } from "react-router-dom";
 
-const styles = {
-  active: {
-    textDecoration: 'none',
-    fontWeight: 'bold',
-    color: 'black',
-  }
-}
-
-const additionalLinks = (history) => {
-  if (isAuthenticated()) {
-    return (
-      <span>
-        <NavLink activeStyle={styles.active} to="/dashboard">Dashboard</NavLink>
-        {' '}
-        <a href="" onClick={() => {
-          logout()
-          history.push("/login")
-        }}>
-          Logout
-        </a>
-      </span>
-    )
-  } else {
-    return (
-      <NavLink activeStyle={styles.active} to="/login">Login</NavLink>
-    )
-  }
-}
-      
-      const NavBar = ({ history }) => (
-        <nav>
-          <NavLink exact activeStyle={styles.active} to="/">Home</NavLink>
-          {' '}
-          <NavLink activeStyle={styles.active} to="/about">About</NavLink>
-          {' '}
-          {additionalLinks(history)}
-          <NavLink activeStyle={styles.active} to="/allbooks">All Books</NavLink>
-        </nav>
+class NavBar extends Component {
+  rightNavItems = () => {
+    const { dispatch, user, location } = this.props;
+    if (user.id) {
+      return (
+        <Menu.Menu position='right'>
+          <Menu.Item
+            name='logout'
+            onClick={() => dispatch(handleLogout(this.props.history))}
+          />
+        </Menu.Menu>
       )
-
-export default NavBar;
+    } else {
+      return (
+        <Menu.Menu position='right'>
+          <Link to='/login'>
+            <Menu.Item
+              id='login'
+              name='login'
+              active={location.pathname === '/login'}
+            /> </Link>
+          <Link to='/register'>
+            <Menu.Item
+              id='register'
+              name='register'
+              active={location.pathname === '/register'}
+            /> </Link>
+        </Menu.Menu>
+      )
+    }
+  }
+  render() {
+    return (
+      <div>
+        <Menu pointing secondary>
+          <Link to='/'>
+            <Menu.Item
+              name='home'
+              id='home'
+              active={this.props.location.pathname === '/'}
+            /> </Link>
+          <Link to='/allbooks'>
+            <Menu.Item
+              name='allbooks'
+              id='allbooks'
+              active={this.props.location.pathname === '/'}
+            /> </Link>
+          {this.rightNavItems()}
+        </Menu>
+      </div>
+    )
+  }
+}
+const mapStateToProps = (state) => {
+  return { user: state.user }
+}
+export default withRouter(connect(mapStateToProps)(NavBar));
