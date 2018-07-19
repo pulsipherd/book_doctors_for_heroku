@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Card, Button } from 'semantic-ui-react';
+import { Grid, Card, Button, Image } from 'semantic-ui-react';
+import styled from 'styled-components';
 import axios from 'axios';
 
+const Truncated = styled.div`
+  height: 200px;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`
 
 class AllBooks extends Component {
   state = { books: [] }
 
-  
   
   bookCard = () => {
     let { books } = this.state;
@@ -15,29 +21,51 @@ class AllBooks extends Component {
       return(
       <Card key={b.id}>
           <Card.Content>
-              <Card.Header>
-                <Link to={`books/${b.id}`}>
-                {b.title}
-                </Link>
-              </Card.Header>
+            <Grid columns={2} celled="internally">
+              
+              <Grid.Column>
+                <Card.Header>
+                  <Link to={`books/${b.id}`}>
+                  {b.title}
+                  </Link>
+                </Card.Header>
+                <Card.Meta>
+                  <span className='author'>
+                  {b.author}
+                  </span>
+                </Card.Meta>
+              </Grid.Column>
 
-            <Card.Meta>
-              <span className='difficulty'>
-                {b.difficulty}
-              </span>
-            </Card.Meta>
+              <Grid.Column>
+                <Image src={b.book_image} height="100" />
+              </Grid.Column>
 
+            </Grid>
             <Card.Description>
-              <span className='blurb'>
-                {b.blurb}
-              </span>
+              <Truncated>
+                <div className='blurb'>
+                  {b.blurb}
+                </div>
+              </Truncated>
             </Card.Description>
 
-            <Card.Meta>
-              <span classNamw='keywords'> 
-                Keywords: {b.keywords} | Lessons: {b.lessons}
-              </span>
-            </Card.Meta>
+            <Grid columns={2} celled="internally">
+              <Grid.Column>
+                <Card.Meta>
+                  <span classNamw='keywords'> 
+                    Keywords: {b.keywords}
+                  </span>
+                </Card.Meta>
+              </Grid.Column>
+
+              <Grid.Column>
+                <Card.Meta>
+                  <span className='lessons'>
+                    Lessons: {b.lessons}
+                  </span>
+                </Card.Meta>
+              </Grid.Column>
+            </Grid>
 
           </Card.Content>
           <Card.Content extra>
