@@ -34,6 +34,11 @@ class AllBooks extends Component {
                   {b.author}
                   </span>
                 </Card.Meta>
+                <Card.Meta>
+                  <span className='difficulty'>
+                    {b.difficulty}
+                  </span>
+                </Card.Meta>
               </Grid.Column>
 
               <Grid.Column>
