@@ -51,6 +51,12 @@ class NavBar extends Component {
               id='allbooks'
               active={this.props.location.pathname === '/'}
             /> </Link>
+          <Link to='/changeform'>
+            <Menu.Item
+              name='New Book'
+              id='New Book'
+              active={this.props.location.pathname === '/'}
+            /> </Link>
           {this.rightNavItems()}
         </Menu>
       </div>

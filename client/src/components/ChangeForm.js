@@ -49,7 +49,7 @@ class ChangeForm extends React.Component {
           onChange={this.handleChange}
           required
         /><br />
-        <label>Teaser</label>
+        <label>Blurb <small>(You can copy and paste this from wherever you'd like -- Amazon, goodreads, LibraryThing, etc-- just make sure you cite your source!)</small></label>
         <Form.TextArea
           width="100%"
           rows="8"
