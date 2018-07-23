@@ -54,7 +54,11 @@ class NavBar extends Component {
           <Link to='/changeform'>
             <Menu.Item
               name='New Book'
+<<<<<<< HEAD
               id='changeform'
+=======
+              id='New Book'
+>>>>>>> add smalls to changeform, start other files
               active={this.props.location.pathname === '/'}
             /> </Link>
           {this.rightNavItems()}
