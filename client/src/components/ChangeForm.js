@@ -32,7 +32,6 @@ class ChangeForm extends React.Component {
   render() {
     let { title, author, blurb, difficulty, keywords, lessons, book_image } = this.state;
     return (
-<<<<<<< HEAD
       <div>
         <p>What book do you think could help other people in some way? We're mostly interested in novels, as fiction can produce such a cathartic experience enabling readers to forget themselves as they learn the lesson of the novel. Life-changing and well written nonfiction books are welcome, too, though. </p>
         <form class="ui form" onSubmit={this.handleSubmit}>
@@ -96,68 +95,6 @@ class ChangeForm extends React.Component {
           <button>Add My Book!</button>
         </form>
       </div>
-=======
-      <form class="ui form" onSubmit={this.handleSubmit}>
-        <label>Title</label>
-        <input
-          id="title"
-          placeholder="title"
-          value={title}
-          onChange={this.handleChange}
-          required
-          /> <br />
-        <label>Author</label>
-        <input
-          id="author"
-          placeholder="author"
-          value={author}
-          onChange={this.handleChange}
-          required
-        /><br />
-        <label>Blurb <small>(You can copy and paste this from wherever you'd like -- Amazon, goodreads, LibraryThing, etc-- just make sure you cite your source!)</small></label>
-        <Form.TextArea
-          width="100%"
-          rows="8"
-          id="blurb"
-          type="textBox"
-          placeholder="blurb"
-          value={blurb}
-          onChange={this.handleChange}
-          required
-        /><br />
-        <label>Difficulty</label>
-        <input
-          id="difficulty"
-          placeholder="difficulty"
-          value={difficulty}
-          onChange={this.handleChange}
-          required
-        /><br />
-        <label>Keywords</label>
-        <input
-          id="keywords"
-          placeholder="keywords"
-          value={keywords}
-          onChange={this.handleChange}
-          required
-        /><br />
-        <label>Lessons</label>
-        <input
-          id="lessons"
-          placeholder="lessons"
-          value={lessons}
-          onChange={this.handleChange}
-          required
-        /><br />
-        <label>URL of cover image </label>
-        <input
-          id="book_image"
-          value={book_image}
-          onChange={this.handleChange}
-        />
-        <button>Submit</button>
-      </form>
->>>>>>> add smalls to changeform, start other files
     )
   }
 }
