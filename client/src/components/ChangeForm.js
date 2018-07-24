@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form } from 'semantic-ui-react';
+import { Form, Container } from 'semantic-ui-react';
 
 class ChangeForm extends React.Component {
   defaultValues = {
@@ -32,7 +32,7 @@ class ChangeForm extends React.Component {
   render() {
     let { title, author, blurb, difficulty, keywords, lessons, book_image } = this.state;
     return (
-      <div>
+      <Container>
         <p>What book do you think could help other people in some way? We're mostly interested in novels, as fiction can produce such a cathartic experience enabling readers to forget themselves as they learn the lesson of the novel. Life-changing and well written nonfiction books are welcome, too, though. </p>
         <form class="ui form" onSubmit={this.handleSubmit}>
           <label>Title</label>
@@ -94,7 +94,7 @@ class ChangeForm extends React.Component {
           />
           <button>Add My Book!</button>
         </form>
-      </div>
+      </Container>
     )
   }
 }
