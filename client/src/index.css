@@ -1,5 +1,7 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+p {
+  line-spacing: 25px;
+}
+
+.description {
+  font-size: 20px;
 }
