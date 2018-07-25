@@ -17,7 +17,6 @@ import FetchUser from './components/FetchUser';
 const App = () => (
   <div>
     <Navbar />
-    {/* <SideBarLeft /> */}
     <FetchUser>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -31,7 +30,6 @@ const App = () => (
         <Route component={NoMatch} />
       </Switch>
     </FetchUser>
-    {/* <Footer /> */}
   </div>
 );
     
