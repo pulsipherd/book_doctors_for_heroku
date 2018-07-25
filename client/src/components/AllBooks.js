@@ -5,10 +5,14 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const Truncated = styled.div`
-  height: 200px;
+  height: 150px;
+  font-size: 12px;
   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
+`
+const LittleMeta = styled.span`
+  font-size: 10px;
 `
 
 class AllBooks extends Component {
@@ -18,75 +22,62 @@ class AllBooks extends Component {
   bookCard = () => {
     let { books } = this.state;
     return books.map(b => {
-      return(
-      <Card key={b.id}>
+      return <Card key={b.id}>
           <Card.Content>
             <Grid columns={2} celled="internally">
-              
               <Grid.Column>
                 <Card.Header>
-                  <Link to={`books/${b.id}`}>
-                  {b.title}
-                  </Link>
+                  <Link to={`books/${b.id}`}>{b.title}</Link>
                 </Card.Header>
                 <Card.Meta>
-                  <span className='author'>
-                  {b.author}
-                  </span>
+                  <span className="author">{b.author}</span>
                 </Card.Meta>
                 <Card.Meta>
-                  <span className='difficulty'>
-                    {b.difficulty}
-                  </span>
+                  <span className="difficulty">{b.difficulty}</span>
                 </Card.Meta>
               </Grid.Column>
 
               <Grid.Column>
                 <Image src={b.book_image} height="100" />
               </Grid.Column>
-
             </Grid>
             <Card.Description>
               <Truncated>
-                <div className='blurb'>
-                  {b.blurb}
-                </div>
+                <div className="blurb">{b.blurb}</div>
               </Truncated>
             </Card.Description>
 
             <Grid columns={2} celled="internally">
               <Grid.Column>
                 <Card.Meta>
-                  <span classNamw='keywords'> 
-                    Keywords: {b.keywords}
-                  </span>
+                  <LittleMeta>
+                    <span className="keywords">Keywords: {b.keywords}</span>
+                  </LittleMeta>
                 </Card.Meta>
               </Grid.Column>
 
               <Grid.Column>
                 <Card.Meta>
-                  <span className='lessons'>
-                    Lessons: {b.lessons}
-                  </span>
+                  <LittleMeta>
+                    <span className="lessons">Lessons: {b.lessons}</span>
+                  </LittleMeta>
                 </Card.Meta>
               </Grid.Column>
             </Grid>
-
           </Card.Content>
           <Card.Content extra>
-            <div className='ui two buttons'>
-              <Button basic color='blue'>
+            <div className="ui two buttons">
+              <Button basic color="blue">
                 Like
               </Button>
-              <Button basic color='green'>
-                <Link to={`/books/${b.id}`}>
-                View Book
-                </Link>
+              <Button basic color="green">
+                <Link to={`/books/${b.id}`}>View Book</Link>
               </Button>
+            
+              
             </div>
           </Card.Content>
-      </Card>
-      )
+        </Card>;
     })
   }
 
