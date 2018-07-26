@@ -86,7 +86,7 @@ class ChangeForm extends React.Component {
             onChange={this.handleChange}
             required
           /><br />
-          <label>URL of cover image <small> Soon we'll be pulling our cover images from the wonderful LibraryThing website, but until we get that up and running, go ahead and find an image of the cover somewhere online and paste the URL of the image here. Make sure to double check to make sure only the image itself pops up, by pasting the url into your browser first. It should take you to a page with only the image of the cover on it.</small></label>
+          <label>URL of cover image <small> Soon we'll be pulling our cover images from the wonderful LibraryThing website, but until we get that up and running, go ahead and find an image of the cover somewhere online and paste the URL of the image here. Make sure to double check to make sure only the image itself pops up, by pasting the url into your browser first. It should take you to a page with only the image of the cover on it. Also, you should spend some time poking around the site where you find the image so that they get some benefit from our pulling the image from their servers.</small></label>
           <input
             id="book_image"
             value={book_image}

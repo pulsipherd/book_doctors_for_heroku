@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import NoMatch from './components/NoMatch';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
@@ -15,7 +16,7 @@ import FetchUser from './components/FetchUser';
 
 
 const App = () => (
-  <div>
+  <div className="background">
     <Navbar />
     <FetchUser>
       <Switch>
@@ -30,6 +31,7 @@ const App = () => (
         <Route component={NoMatch} />
       </Switch>
     </FetchUser>
+    <Footer />
   </div>
 );
     

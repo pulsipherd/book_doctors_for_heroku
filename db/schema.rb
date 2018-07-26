@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 2018_07_18_212502) do
     t.string "lessons"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
     t.string "book_image"
   end
 

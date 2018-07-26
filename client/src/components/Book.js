@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ChangeForm from './ChangeForm';
-import { Header, Grid, Image } from "semantic-ui-react";
+import { Header, Grid, Image, Container } from "semantic-ui-react";
 
 
 class Book extends React.Component {
@@ -26,7 +26,7 @@ class Book extends React.Component {
   show() {
     let { book: { title, author, blurb, difficulty, keywords, lessons, book_image }} = this.state;
     return (
-      <div>
+      <Container>
         <Grid columns={2}>
           <Grid.Column>
             <h1>{title}</h1>
@@ -37,10 +37,10 @@ class Book extends React.Component {
             <Image src={book_image} height="400"/>
           </Grid.Column>
         </Grid>
-            <p style={{ whiteSpace: 'pre-wrap' }}>{blurb}</p>
+        <p style={{ whiteSpace: 'pre-wrap', fontSize: 15 }}>{blurb}</p>
 
           <Header as='h5' disabled>Keywords: {keywords} | Lessons: {lessons}</Header>
-      </div>
+      </Container>
     )
   }
   
@@ -52,10 +52,10 @@ class Book extends React.Component {
   render() {
     let { edit } = this.state;
     return (
-      <div>
+      <Container>
         {edit ? this.edit() : this.show()}
         <button onClick={this.toggleEdit}>{edit ? 'Cancel' : 'Edit'}</button>
-      </div>
+      </Container>
     )
   }
 }
