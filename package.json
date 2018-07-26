@@ -9,10 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "semantic-ui-react": "^0.82.0",
-    "styled-components": "^3.3.3"
-  },
+  "dependencies": {},
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "main": "index.js",
   "directories": {
