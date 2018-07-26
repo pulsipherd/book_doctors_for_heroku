@@ -6,6 +6,26 @@ p {
   font-size: 20px;
 }
 
+.regular {
+  font-size: 15px;
+}
+
 .smallfont {
   font-size: 8px;
+}
+/* Colors */
+
+.background {
+  background-color: #efdfbb
+}
+
+.header {
+  background-color: #a5182d
+}
+
+.footer {
+  background-color: #a5182d!important;
+  position: relative !important;
+  padding: 5em 5% !important;
+  width:100% !important; 
 }

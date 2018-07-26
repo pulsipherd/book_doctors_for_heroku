@@ -3,11 +3,11 @@ Book.create(
   author: "Andy Weir", 
   blurb: "'You were on your way home when you died.It was a car accident. Nothing particularly remarkable, but fatal nonetheless. You left behind a wife and two children. It was a painless death. The EMTs tried their best to save you, but to no avail. Your body was so utterly shattered you were better off, trust me.And that's when you met me.'
 
-A short story about the universe.", 
+A short story about the universe. ~from Amazon.com", 
   difficulty: "College", 
   keywords: "Meaning of Life, Death, Kindness, Experience", 
   lessons: "Death, Confusion, Fear", 
-  book_image: "https://www.goodreads.com/book/photo/17563539-the-egg" 
+  book_image: "https://images.gr-assets.com/books/1431492647l/17563539.jpg" 
    
 )
 

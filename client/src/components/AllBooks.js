@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Card, Button, Image } from 'semantic-ui-react';
+import { Grid, Card, Button, Image, Container } from 'semantic-ui-react';
 import styled from 'styled-components';
 import axios from 'axios';
 
@@ -100,13 +100,15 @@ class AllBooks extends Component {
   }
 
   render() {
-    return <div>
+    return (
+      <Container>
         <Grid columns={4} celled="internally">
           <Card.Group stackable itemsPerRow={3}>
             {this.bookCard()}
           </Card.Group>
         </Grid>
-      </div>;
+      </Container>
+    )
   }
 }
 
