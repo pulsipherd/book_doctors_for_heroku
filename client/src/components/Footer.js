@@ -29,7 +29,7 @@ class Footer extends Component {
             <Grid.Column width={7}>
               <Header as='h4' inverted>Get involved:</Header>
               <p style={{ color: "white" }}>Become a Book Doctor! <Link to='/register'>Register here</Link></p>
-              <p style={{ color: "white" }}>Like us on facebook and share us on social media.</p>
+              <p style={{ color: "white" }}>Share us on facebook and social media.</p>
               <ShareUs />
 
             </Grid.Column>

@@ -19,7 +19,7 @@ p {
   background-color: #efdfbb
 }
 
-.header {
+.navbar {
   background-color: #a5182d
 }
 
@@ -28,4 +28,14 @@ p {
   position: relative !important;
   padding: 5em 5% !important;
   width:100% !important; 
+}
+
+.pquote {
+  float: right;
+  width: 300px;
+  color: rgb(78, 72, 47);
+  font-family: 'Marck Script', cursive;  
+  font-size: 25px;
+  line-height: 1.2;
+  margin: 0 3px 3px 0;
 }
