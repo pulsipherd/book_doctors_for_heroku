@@ -78,7 +78,7 @@ class ChangeForm extends React.Component {
             onChange={this.handleChange}
             required
           /><br />
-          <label>Lessons</label>
+          <label>Symptoms</label>
           <input
             id="lessons"
             placeholder="lessons"

@@ -16,18 +16,22 @@ p {
 /* Colors */
 
 .background {
-  background-color: #efdfbb
+  background-color: #efdfbb;
 }
 
 .navbar {
-  background-color: #a5182d
+  background-color: #a5182d;
+  font-weight: bold;
 }
 
 .footer {
   background-color: #a5182d!important;
   position: relative !important;
-  padding: 5em 5% !important;
   width:100% !important; 
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 .pquote {
@@ -38,4 +42,10 @@ p {
   font-size: 25px;
   line-height: 1.2;
   margin: 0 3px 3px 0;
+}
+
+/* search form styling */
+
+label.right {
+  float: right;
 }

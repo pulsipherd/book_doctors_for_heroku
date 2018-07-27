@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Grid, Card, Button, Image, Container } from 'semantic-ui-react';
 import styled from 'styled-components';
 import axios from 'axios';
+import BookSearch from './BookSearch'
 
 const Truncated = styled.div`
   height: 150px;
@@ -10,7 +11,8 @@ const Truncated = styled.div`
   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`
+  `
+
 const LittleMeta = styled.span`
   font-size: 10px;
 `
@@ -59,7 +61,7 @@ class AllBooks extends Component {
               <Grid.Column>
                 <Card.Meta>
                   <LittleMeta>
-                    <span className="lessons">Lessons: {b.lessons}</span>
+                    <span className="lessons">Symptoms: {b.lessons}</span>
                   </LittleMeta>
                 </Card.Meta>
               </Grid.Column>
@@ -67,10 +69,10 @@ class AllBooks extends Component {
           </Card.Content>
           <Card.Content extra>
             <div className="ui two buttons">
-              <Button basic color="blue">
+              <Button color="blue">
                 Like
               </Button>
-              <Button basic color="green">
+              <Button color="green">
                 <Link to={`/books/${b.id}`}>View Book</Link>
               </Button>
             
@@ -102,6 +104,8 @@ class AllBooks extends Component {
   render() {
     return (
       <Container>
+        <BookSearch />
+        <br />
         <Grid columns={4} celled="internally">
           <Card.Group stackable itemsPerRow={3}>
             {this.bookCard()}
