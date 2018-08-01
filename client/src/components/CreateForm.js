@@ -5,33 +5,20 @@ import { Form, Container } from 'semantic-ui-react';
 class CreateForm extends React.Component {
   
   state = {
-    title: "Main Title: Subtitle, too, if it has one",
-    author: "Author's First and Last Name",
-    blurb:
-      "You can copy it from Amazon, GoodReads, or anywhere else, if you'd like. Just make sure you give credit where it's due! ('... according to http://...",
-    difficulty: "Children's, Young Adult, College?",
-    keywords: "Where's it set? What are some of the topics?",
-    lessons:
-      "What are some of the struggles people have that this could help with?"
+      title: "",
+      author: "",
+      blurb: "",
+      difficulty: "",
+      keywords: "",
+      lessons: ""
   };
 
-  componentDidMount() {
-    if (this.props.id) this.setState({ ...this.props });
+  submit = () => {
+    console.log("matthew is the greatest")
+    const book = { ... this.state }
+    axios.post('/api/books', book)
+      .then(res => this.props.history.push('/allbooks'))
   }
-  submit = (book) => {
-    let { books } = this.state
-    axios.post('/api/books', { book })
-      .then(res => this.setState({
-        books: [res.data, ...books]
-      }))
-  }
-
-  handleSubmit = e => {
-    e.preventDefault();
-    let book = { ...this.state };
-    this.submit(book);
-    this.setState({ ...this.defaultValues });
-  };
 
   handleChange = e => {
     let {
@@ -59,7 +46,7 @@ class CreateForm extends React.Component {
           lesson of the novel. Life-changing and well written nonfiction books
           are welcome, too, though.{" "}
         </p>
-        <form class="ui form" onSubmit={this.handleSubmit}>
+        <form class="ui form" onSubmit={this.submit}>
           <label>Title</label>
           <input
             id="title"
@@ -160,7 +147,7 @@ class CreateForm extends React.Component {
             value={book_image}
             onChange={this.handleChange}
           />
-          <button>Add My Book!</button>
+          <button onClick={this.submit}>Add my book!</button>>
         </form>
       </Container>
     );

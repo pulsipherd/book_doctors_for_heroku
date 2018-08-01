@@ -26,12 +26,6 @@ class ChangeForm extends React.Component {
       }))
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
-    let book = { ...this.state };
-    this.submit(book);
-    this.setState({ ...this.defaultValues });
-  };
 
   handleChange = e => {
     let {
@@ -160,7 +154,7 @@ class ChangeForm extends React.Component {
             value={book_image}
             onChange={this.handleChange}
           />
-          <button>Add My Book!</button>
+          <button onClick={this.submit}>Change my book!</button>
         </form>
       </Container>
     );
