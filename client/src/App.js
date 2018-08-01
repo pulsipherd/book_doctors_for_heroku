@@ -12,7 +12,9 @@ import Dashboard from './components/Dashboard';
 import Book from './components/Book';
 import AllBooks from './components/AllBooks';
 import ChangeForm from './components/ChangeForm';
+import CreateForm from './components/CreateForm';
 import FetchUser from './components/FetchUser';
+import NewBookContainer from './components/NewBookContainer';
 
 
 const App = () => (
@@ -25,6 +27,8 @@ const App = () => (
         <Route path="/allbooks" component={AllBooks} />
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
+        <ProtectedRoute path="/NewBookContainer" component={NewBookContainer} />
+        <ProtectedRoute path="/CreateForm" component={CreateForm} />
         <ProtectedRoute path="/ChangeForm" component={ChangeForm} />
         <ProtectedRoute path="/dashboard" component={Dashboard} />
         <ProtectedRoute path="/books/:id" component={Book} />

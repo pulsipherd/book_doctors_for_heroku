@@ -2,8 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { Form, Container } from 'semantic-ui-react';
 
-class ChangeForm extends React.Component {
-  defaultValues = {
+class CreateForm extends React.Component {
+  
+  state = {
     title: "Main Title: Subtitle, too, if it has one",
     author: "Author's First and Last Name",
     blurb:
@@ -13,16 +14,15 @@ class ChangeForm extends React.Component {
     lessons:
       "What are some of the struggles people have that this could help with?"
   };
-  state = { ...this.dafaultValues };
 
   componentDidMount() {
     if (this.props.id) this.setState({ ...this.props });
   }
-
   submit = (book) => {
     let { books } = this.state
     axios.post('/api/books', { book })
-      .then(res => this.setState({books: [res.data, ...books ]
+      .then(res => this.setState({
+        books: [res.data, ...books]
       }))
   }
 
@@ -167,4 +167,4 @@ class ChangeForm extends React.Component {
   }
 }
 
-export default ChangeForm;
+export default CreateForm;

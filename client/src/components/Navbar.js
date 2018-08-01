@@ -51,7 +51,7 @@ class NavBar extends Component {
               id='allbooks'
               active={this.props.location.pathname === '/'}
             /> </Link>
-          <Link to='/changeform'>
+          <Link to='/createform'>
             <Menu.Item
               name='New Book'
               id='New Book'
