@@ -84,22 +84,20 @@ class CreateForm extends React.Component {
             required
           />
           <br />
-          <label>
-            Difficulty{" "}
-            <small>
-              (This project is intended for readers of all ages, and eventually
-              we'll probably settle on set categories for reading levels here.
-              For now, you can categorize your book however you'd like--infant,
-              toddler, young adult, high school, college, professional, etc)
-            </small>
-          </label>
-          <input
+          <label>Difficulty </label>
+          <select
             id="difficulty"
             placeholder="difficulty"
             value={difficulty}
             onChange={this.handleChange}
-            required
-          />
+            required>
+            <option>infant</option>
+            <option>toddler</option>
+            <option selected>young adult</option>
+            <option>high school</option>
+            <option>college</option>
+            <option>professional</option>
+          </select>
           <br />
           <label>
             Keywords{" "}

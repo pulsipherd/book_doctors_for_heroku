@@ -14,11 +14,11 @@ class BookSearch extends Component {
             <form class="form" onSubmit={this.handleSubmit}>
               <input
                 id="keywordsearch"
-                placeholder=""
+                placeholder="Coming Soon!"
               /> <br />
               <input
                 id="topicsearch"
-                placeholder=""
+                placeholder="Coming Soon!"
               />
             </form>
           </Grid.Column>
