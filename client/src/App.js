@@ -12,6 +12,7 @@ import Dashboard from './components/Dashboard';
 import Book from './components/Book';
 import AllBooks from './components/AllBooks';
 import ChangeForm from './components/ChangeForm';
+import CreateForm from './components/CreateForm';
 import FetchUser from './components/FetchUser';
 
 
@@ -26,6 +27,7 @@ const App = () => (
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
         <ProtectedRoute path="/ChangeForm" component={ChangeForm} />
+        <ProtectedRoute path="/CreateForm" component={CreateForm} />
         <ProtectedRoute path="/dashboard" component={Dashboard} />
         <ProtectedRoute path="/books/:id" component={Book} />
         <Route component={NoMatch} />
