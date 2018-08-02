@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Container } from 'semantic-ui-react';
+import { Form, Container, Button } from 'semantic-ui-react';
 
 class ChangeForm extends React.Component {
   defaultValues = {
@@ -99,7 +99,7 @@ class ChangeForm extends React.Component {
             value={book_image}
             onChange={this.handleChange}
           />
-          <button>Save My Book!</button>
+          <Button color="yellow" onClick={this.submit}>Save My Book!</Button>
         </form>
       </Container>
     )

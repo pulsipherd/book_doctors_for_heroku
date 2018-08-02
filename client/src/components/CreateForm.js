@@ -145,7 +145,7 @@ class CreateForm extends React.Component {
             value={book_image}
             onChange={this.handleChange}
           />
-          <button onClick={this.submit}>Add my book!</button>
+          <button>Add my book!</button>
         </form>
       </Container>
     );
