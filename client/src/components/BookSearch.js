@@ -3,30 +3,26 @@ import { Grid, Dropdown } from 'semantic-ui-react';
 
 class BookSearch extends Component {
   render() {
-    return (
-      <div>
+    return <div>
+        <br />
         <Grid>
-          <Grid.Column width={4} >
-              <label className="right">Search for keywords</label> <br />
-              <label className="right">Search for symptoms </label>
+          <Grid.Column width={4}>
+            <label className="right">Search for keywords</label> <br />
+            <label className="right">Search for symptoms </label>
           </Grid.Column>
           <Grid.Column width={4}>
             <form class="form" onSubmit={this.handleSubmit}>
-              <input
-                id="keywordsearch"
-                placeholder="Coming Soon!"
-              /> <br />
-              <input
-                id="topicsearch"
-                placeholder="Coming Soon!"
-              />
+              <input id="keywordsearch" placeholder="Coming Soon!" /> <br />
+              <input id="topicsearch" placeholder="Coming Soon!" />
             </form>
           </Grid.Column>
           <Grid.Column width={4}>
-            <label className="right">Select reading level</label>
+            <label className="right">
+              Select reading level <small>(Coming soon!)</small>
+            </label>
           </Grid.Column>
           <Grid.Column width={4}>
-            <select> 
+            <select>
               <option>infant</option>
               <option>toddler</option>
               <option selected>young adult</option>
@@ -36,8 +32,7 @@ class BookSearch extends Component {
             </select>
           </Grid.Column>
         </Grid>
-      </div>
-    )
+      </div>;
   }
 }
 

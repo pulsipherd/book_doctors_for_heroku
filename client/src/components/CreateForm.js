@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Form, Container } from 'semantic-ui-react';
+import { Form, Container, Button } from 'semantic-ui-react';
 
 class CreateForm extends React.Component {
   
@@ -145,7 +145,7 @@ class CreateForm extends React.Component {
             value={book_image}
             onChange={this.handleChange}
           />
-          <button>Add my book!</button>
+          <Button color="yellow" onClick={this.submit}>Add my book!</Button>
         </form>
       </Container>
     );

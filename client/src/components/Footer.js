@@ -18,10 +18,10 @@ class Footer extends Component {
             <Grid.Column width={4}>
               <Header inverted as="h4" content="About" />
               <List link inverted>
-                <List.Item as="a">Sitemap</List.Item>
+                <List.Item as="a">Sitemap <small>(Coming soon!)</small></List.Item>
                 <List.Item href="mailto:pulsipherd@gmail.com">Contact Us</List.Item>
-                <List.Item as="a">Articles</List.Item>
-                <List.Item as="a">Blog</List.Item>
+              <List.Item as="a">Articles<small>(Coming soon!)</small></List.Item>
+              <List.Item as="a">Blog<small>(Coming soon!)</small></List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={10}>
