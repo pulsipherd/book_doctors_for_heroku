@@ -32,15 +32,16 @@ class AllBooks extends Component {
                   <Link to={`books/${b.id}`}>{b.title}</Link>
                 </Card.Header>
                 <Card.Meta>
-                  <span className="author">{b.author}</span>
+                  <span className="author">by {b.author}</span>
+                <hr />
                 </Card.Meta>
                 <Card.Meta>
-                  <span className="difficulty">{b.difficulty}</span>
+                  <span className="difficulty">{b.difficulty} level</span>
                 </Card.Meta>
               </Grid.Column>
 
               <Grid.Column>
-                <Image src={b.book_image} height="100" />
+                <Image src={b.book_image} height="120" />
               </Grid.Column>
             </Grid>
             <Card.Description>

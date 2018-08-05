@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Dropdown } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 
 class BookSearch extends Component {
   render() {

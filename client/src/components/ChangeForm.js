@@ -99,7 +99,9 @@ class ChangeForm extends React.Component {
             value={book_image}
             onChange={this.handleChange}
           />
+          <br />
           <Button color="yellow" onClick={this.submit}>Save My Book!</Button>
+          <br />
         </form>
       </Container>
     )

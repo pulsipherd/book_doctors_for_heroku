@@ -15,7 +15,7 @@ class CreateForm extends React.Component {
 
   submit = () => {
     console.log("matthew is the greatest")
-    const book = { ... this.state }
+    const book = { ...this.state }
     axios.post('/api/books', book)
       .then(res => this.props.history.push('/allbooks'))
   }
@@ -145,7 +145,7 @@ class CreateForm extends React.Component {
             value={book_image}
             onChange={this.handleChange}
           />
-          <Button color="yellow" onClick={this.submit}>Add my book!</Button>
+          <Button color="yellow">Add my book!</Button>
         </form>
       </Container>
     );
