@@ -18,18 +18,17 @@ class BookSearch extends Component {
           </Grid.Column>
           <Grid.Column width={4}>
             <label className="right">
-              Select reading level <small>(Coming soon!)</small>
+              Select reading level <small>(Filter coming soon!)</small>
             </label>
           </Grid.Column>
           <Grid.Column width={4}>
-            <select>
-              <option>infant</option>
-              <option>toddler</option>
-              <option selected>young adult</option>
-              <option>high school</option>
-              <option>college</option>
-              <option>professional</option>
-            </select>
+          <select>
+            <option>infant</option>
+            <option>toddler</option>
+            <option>child</option>
+            <option selected>young adult</option>
+            <option>adult</option>
+          </select>
           </Grid.Column>
         </Grid>
       </div>;

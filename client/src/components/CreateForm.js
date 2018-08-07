@@ -93,10 +93,9 @@ class CreateForm extends React.Component {
             required>
             <option>infant</option>
             <option>toddler</option>
+            <option>child</option>
             <option selected>young adult</option>
-            <option>high school</option>
-            <option>college</option>
-            <option>professional</option>
+            <option>adult</option>
           </select>
           <br />
           <label>

@@ -71,10 +71,9 @@ class ChangeForm extends React.Component {
             required>
             <option>infant</option>
             <option>toddler</option>
+            <option>child</option>
             <option selected>young adult</option>
-            <option>high school</option>
-            <option>college</option>
-            <option>professional</option>
+            <option>adult</option>
           </select>
           <br />
           <label>Keywords <small>(these should be the actual topic of the book. If it's a novel, maybe the setting, or some of the activities that happen. Just anything that someone might want to look up for a friend who's interested in that sort of thing)</small></label>
