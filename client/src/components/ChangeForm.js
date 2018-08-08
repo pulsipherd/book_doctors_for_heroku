@@ -6,9 +6,9 @@ class ChangeForm extends React.Component {
     title: "Main Title: Subtitle, too, if it has one",
     author: "Author's First and Last Name",
     blurb:
-      "You can copy it from Amazon, GoodReads, or anywhere else, if you'd like. Just make sure you give credit where it's due! ('... according to http://...",
-    difficulty: "Children's, Young Adult, College?",
-    keywords: "Where's it set? What are some of the topics?",
+      "You can copy it from Amazon, GoodReads, or anywhere else, if you would like. Just make sure you give credit where it's due! (for example, '... according to GoodReads')",
+    difficulty: "",
+    keywords: "Where's it set? What are some of the things that happen in it?",
     lessons:
       "What are some of the struggles people have that this could help with?"
   };
@@ -160,7 +160,7 @@ class ChangeForm extends React.Component {
           </Button>
           <br />
         </form>
-        <Button
+        {/* <Button
           color="red"
           onClick={() => {
             if (window.confirm("Are you sure you want to delete your book?")) {
@@ -169,7 +169,7 @@ class ChangeForm extends React.Component {
           }}
         >
           Delete my book.
-        </Button>{" "}
+        </Button>{" "} */}
       </Container>
     );
   }
