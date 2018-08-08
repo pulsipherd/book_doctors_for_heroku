@@ -107,7 +107,6 @@ class AllBooks extends Component {
       <Container>
         <BookSearch />
         <br />
-        <p>If the New Book form fails to save your book, feel free to scroll down and edit one of the placeholder "Your Book Here" cards that I've included in case the form doesn't work for you. I'm working to make it more consistent.</p>
         <Grid columns={4} celled="internally">
           <Card.Group stackable itemsPerRow={3}>
             {this.bookCard()}
