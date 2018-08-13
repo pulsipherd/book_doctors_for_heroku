@@ -13,12 +13,18 @@ class CreateForm extends React.Component {
       lessons: ""
   };
 
-  submit = () => {
+  submit = (e) => {
+    e.preventDefault();
     console.log("creating your book...")
     alert("Please check to make sure your book was added. If this form fails to save your book, feel free to scroll down on the All Books page and edit one of the placeholder 'Your Book Here' cards that I've included in case the form doesn't work for you. I'm working to make it more consistent.")
     const book = { ...this.state }
     axios.post('/api/books', book)
-      .then(res => this.props.history.push('/allbooks'))
+      .then(res => {
+        this.props.history.push('/allbooks')
+      })
+      .catch(error => {
+        debugger
+      })
   }
 
   handleChange = e => {

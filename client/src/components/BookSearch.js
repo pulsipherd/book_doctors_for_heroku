@@ -11,7 +11,7 @@ class BookSearch extends Component {
             <label className="right">Search for symptoms </label>
           </Grid.Column>
           <Grid.Column width={4}>
-            <form class="form" onSubmit={this.handleSubmit}>
+            <form className="form" onSubmit={this.handleSubmit}>
               <input id="keywordsearch" placeholder="Coming Soon!" /> <br />
               <input id="topicsearch" placeholder="Coming Soon!" />
             </form>
