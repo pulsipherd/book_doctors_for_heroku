@@ -63,7 +63,7 @@ class AllBooks extends Component {
                 <Card.Meta>
                   <LittleMeta>
                     <span className="lessons">Symptoms: {b.lessons}</span>
-                  </LittleMeta>
+                  </LittleMeta>π
                 </Card.Meta>
               </Grid.Column>
             </Grid>
