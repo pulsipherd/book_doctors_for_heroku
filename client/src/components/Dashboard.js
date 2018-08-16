@@ -37,14 +37,14 @@ class Dashboard extends React.Component {
     );
   };
 
-  deleteBook = book => {
-    let { books } = this.state;
-    axios.delete("/api/books", { book }).then(res =>
-      this.setState({
-        books: [res.data, ...books]
-      })
-    );
-  };
+  // deleteBook = (book => {
+  //   let { books } = this.state;
+  //   axios.delete("/api/books", { book }).then(res =>
+  //     this.setState({
+  //       books: [books]
+  //     })
+  //   );
+  // };)
 
   toggleForm = () => {
     this.setState(state => {

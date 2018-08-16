@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Container, Button } from 'semantic-ui-react';
+import axios from 'axios';
 
 class ChangeForm extends React.Component {
   defaultValues = {
@@ -33,7 +34,15 @@ class ChangeForm extends React.Component {
     this.setState({ [id]: value });
   };
 
-  
+  deleteBook = (id) => {
+    let { books } = this.state;
+    axios.delete(`/api/books/${id}`)
+      .then(res => {
+        this.setState({
+          books: [books]
+        })
+      })
+  }
     
 
   render() {
@@ -162,12 +171,7 @@ class ChangeForm extends React.Component {
         </form>
         <Button
           color="red"
-          onClick={() => {
-            if (window.confirm("Are you sure you want to delete your book?")) {
-              this.deleteBook();
-            }
-          }}
-        >
+          onClick={this.deleteBook}>
           Delete my book.
         </Button>{" "}
       </Container>
