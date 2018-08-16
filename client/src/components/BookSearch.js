@@ -22,12 +22,13 @@ class BookSearch extends Component {
             </label>
           </Grid.Column>
           <Grid.Column width={4}>
-          <select defaultValue="young adult">
+          <select>
+            <option>young adult</option>
             <option>toddler</option>
             <option>child</option>
-            <option>young adult</option>
             <option>college</option>
             <option>adult</option>
+            <option>professional</option>
           </select>
           </Grid.Column>
         </Grid>
