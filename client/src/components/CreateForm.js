@@ -68,11 +68,15 @@ class CreateForm extends React.Component {
           <Form.TextArea width="16" rows="8" id="blurb" type="html" placeholder="blurb" value={blurb} onChange={this.handleChange} required />
           <br />
           <label>Difficulty </label>
-          <select id="difficulty" placeholder="difficulty" value={difficulty} onChange={this.handleChange} required>
-            <option>infant</option>
+        <select
+          id="difficulty"
+          placeholder="difficulty"
+          defaultValue="young adult"
+          onChange={this.handleChange} required>
             <option>toddler</option>
             <option>child</option>
-            <option selected>young adult</option>
+            <option>young adult</option>
+            <option>college</option>
             <option>adult</option>
           </select>
           <br />

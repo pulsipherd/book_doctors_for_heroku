@@ -101,12 +101,12 @@ class ChangeForm extends React.Component {
             onChange={this.handleChange}
             required
           >
-            <option>infant</option>
-            <option>toddler</option>
-            <option>child</option>
-            <option selected>young adult</option>
-            <option>adult</option>
-          </select>
+              <option>toddler</option>
+              <option>child</option>
+              <option>young adult</option>
+              <option>college</option>
+              <option>adult</option>
+            </select>
           <br />
           <label>
             Keywords{" "}
