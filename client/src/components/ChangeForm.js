@@ -55,7 +55,7 @@ class ChangeForm extends React.Component {
           lesson of the novel. Life-changing and well written nonfiction books
           are welcome, too, though.{" "}
         </p>
-        <form class="ui form" onSubmit={this.handleSubmit}>
+        <form className="ui form" onSubmit={this.handleSubmit}>
           <label>Title</label>
           <input
             id="title"

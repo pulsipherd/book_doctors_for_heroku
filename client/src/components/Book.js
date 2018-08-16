@@ -86,7 +86,7 @@ class Book extends React.Component {
         {edit ? this.edit() : this.show()}
         <Button color="green" onClick={this.toggleEdit}>{edit ? 'Cancel' : 'Edit'}</Button>
         <Button color="blue">Like</Button>
-      <p class="invisible"> What a great book! </p>
+      <p className="invisible"> What a great book! </p>
       </Container>
     )
   }
