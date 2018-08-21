@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { connect } from "react-redux";
 import { Form, Container, Button } from 'semantic-ui-react';
 import axios from 'axios';
 
@@ -36,12 +38,10 @@ class ChangeForm extends React.Component {
 
   deleteBook = (id) => {
     let { books } = this.state;
+    alert("Are you sure you want to delete your book?")
     axios.delete(`/api/books/${id}`)
-      .then(res => {
-        this.setState({
-          books: [books]
-        })
-      })
+      .then(this.props.history.push("/allbooks"))
+    
   }
     
 
@@ -55,6 +55,7 @@ class ChangeForm extends React.Component {
       lessons,
       book_image
     } = this.state;
+    const { id } = this.props;
     return (
       <Container>
         <p>
@@ -171,12 +172,19 @@ class ChangeForm extends React.Component {
         </form>
         <Button
           color="red"
-          onClick={this.deleteBook}>
-          Delete my book.
+          onClick={() => this.deleteBook(id)}
+      >
+        Delete my book.
         </Button>{" "}
       </Container>
     );
   }
 }
 
-export default ChangeForm;
+const mapStateToProps = state => {
+  return {
+    account: state.user
+  }
+}
+
+export default withRouter(connect(mapStateToProps)(ChangeForm));
