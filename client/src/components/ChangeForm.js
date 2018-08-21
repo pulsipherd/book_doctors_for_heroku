@@ -1,5 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { connect } from "react-redux";
 import { Form, Container, Button } from 'semantic-ui-react';
+import axios from 'axios';
 
 class ChangeForm extends React.Component {
   defaultValues = {
@@ -33,7 +36,13 @@ class ChangeForm extends React.Component {
     this.setState({ [id]: value });
   };
 
-  
+  deleteBook = (id) => {
+    let { books } = this.state;
+    alert("Are you sure you want to delete your book?")
+    axios.delete(`/api/books/${id}`)
+      .then(this.props.history.push("/allbooks"))
+    
+  }
     
 
   render() {
@@ -46,7 +55,9 @@ class ChangeForm extends React.Component {
       lessons,
       book_image
     } = this.state;
-    return <Container>
+    const { id } = this.props;
+    return (
+      <Container>
         <p>
           What book do you think could help other people in some way? We're
           mostly interested in novels, as fiction can produce such a
@@ -114,18 +125,21 @@ class ChangeForm extends React.Component {
           </Button>
           <br />
         </form>
-        {/* <Button
+         <Button
           color="red"
-          onClick={() => {
-            if (window.confirm("Are you sure you want to delete your book?")) {
-              this.deleteBook();
-            }
-          }}
-        >
-          Delete my book.
-        </Button>{" "} */}
-      </Container>;
+          onClick={() => this.deleteBook(id)}
+      >
+        Delete my book.
+        </Button>{" "}
+      </Container>
+    );
   }
 }
 
-export default ChangeForm;
+const mapStateToProps = state => {
+  return {
+    account: state.user
+  }
+}
+
+export default withRouter(connect(mapStateToProps)(ChangeForm));
