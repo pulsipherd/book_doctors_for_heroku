@@ -31,7 +31,14 @@ p {
 }
 
 .invisible {
-  visibility: hidden;
+  background:transparent;
+  border:none;
+  outline:none;
+  display:block;
+  height:10px;
+  width:200px;
+  cursor:pointer;
+  font-size: 0;
 }
 
 .pquote {

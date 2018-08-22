@@ -25,7 +25,8 @@ class ChangeForm extends React.Component {
     e.preventDefault();
     let book = { ...this.state };
     this.props.submit(book);
-    this.setState({ ...this.defaultValues });
+    // this.setState({ ...this.defaultValues });
+    // this.props.history.push("/allbooks")
     console.log("Submitted correctly");
   };
 
@@ -38,10 +39,9 @@ class ChangeForm extends React.Component {
 
   deleteBook = (id) => {
     let { books } = this.state;
-    alert("Are you sure you want to delete your book?")
-    axios.delete(`/api/books/${id}`)
-      .then(this.props.history.push("/allbooks"))
-    
+    if (window.confirm("Are you sure you want to delete your book?"))
+      axios.delete(`/api/books/${id}`)
+        .then(this.props.history.push("/allbooks"))    
   }
     
 
@@ -125,12 +125,12 @@ class ChangeForm extends React.Component {
           </Button>
           <br />
         </form>
-         <Button
-          color="red"
+        <button
+          className="invisible"
           onClick={() => this.deleteBook(id)}
       >
         Delete my book.
-        </Button>{" "}
+        </button>{" "}
       </Container>
     );
   }

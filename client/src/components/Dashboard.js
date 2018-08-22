@@ -30,15 +30,13 @@ class Dashboard extends React.Component {
   submit = book => {
     let { books } = this.state;
     axios.post("/api/books", { book }).then(res => {
-      debugger
       this.setState({
         books: [res.data, ...books],
         showForm: false
       })
-    }
-    )
+    })
       .catch(error => {
-      debugger
+        debugger
     })
   };
 
