@@ -25,7 +25,7 @@ class ChangeForm extends React.Component {
     e.preventDefault();
     let book = { ...this.state };
     this.props.submit(book);
-    // this.setState({ ...this.defaultValues });
+    this.setState({ ...this.defaultValues });
     // this.props.history.push("/allbooks")
     console.log("Submitted correctly");
   };
