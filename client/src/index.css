@@ -21,7 +21,14 @@ p {
 
 .navbar {
   background-color: #a5182d;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  color: #efdfbb;
   font-weight: bold;
+
 }
 
 .footer {
