@@ -37,28 +37,30 @@ class NavBar extends Component {
   }
   render() {
     return (
-      <div className="navbar">
-        <Menu pointing secondary>
-          <Link to='/'>
-            <Menu.Item
-              name='home'
-              id='home'
-              active={this.props.location.pathname === '/'}
-            /> </Link>
-          <Link to='/allbooks'>
-            <Menu.Item
-              name='All Books'
-              id='allbooks'
-              active={this.props.location.pathname === '/'}
-            /> </Link>
-          <Link to='/createform'>
-            <Menu.Item
-              name='New Book'
-              id='New Book'
-              active={this.props.location.pathname === '/'}
-            /> </Link>
-          {this.rightNavItems()}
-        </Menu>
+      <div className="navbar-placeholder">
+        <div className="navbar">
+          <Menu pointing secondary>
+            <Link to='/'>
+              <Menu.Item
+                name='home'
+                id='home'
+                active={this.props.location.pathname === '/'}
+              /> </Link>
+            <Link to='/allbooks'>
+              <Menu.Item
+                name='All Books'
+                id='allbooks'
+                active={this.props.location.pathname === '/'}
+              /> </Link>
+            <Link to='/createform'>
+              <Menu.Item
+                name='New Book'
+                id='New Book'
+                active={this.props.location.pathname === '/'}
+              /> </Link>
+            {this.rightNavItems()}
+          </Menu>
+        </div>
       </div>
     )
   }
