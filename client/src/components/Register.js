@@ -34,6 +34,7 @@ class Register extends Component {
               placeholder='First Name'
               onChange={this.handleChange}
             />
+          </Form.Field>
           <Form.Field>
             <label>Last Name</label>
             <input
@@ -42,6 +43,7 @@ class Register extends Component {
               placeholder='Last Name'
               onChange={this.handleChange}
             />
+          </Form.Field>
           <Form.Field>
             <label>Email</label>
             <input
