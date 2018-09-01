@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { Button, Form, Segment, Header } from 'semantic-ui-react'
 import { handleRegister } from '../actions/auth'
 import { connect } from 'react-redux'
+
 class Register extends Component {
-  state = { email: '', password: '', passwordConfirmation: '' }
+  state = { firstname: '', lastname: '', email: '', password: '', passwordConfirmation: '' }
   handleSubmit = (e) => {
     e.preventDefault();
-    const { email, password, passwordConfirmation } = this.state;
+    const { firstname, lastname, email, password, passwordConfirmation } = this.state;
     if (password === passwordConfirmation)
       this.props.dispatch(handleRegister(email, password, passwordConfirmation, this.props.history))
     else
@@ -18,16 +19,35 @@ class Register extends Component {
   }
 
   render() {
-    const { email, password, passwordConfirmation } = this.state;
+    const { firstname, lastname, email, password, passwordConfirmation } = this.state;
     return (
       <Segment basic>
         <Header as='h1' textAlign='center'>Register</Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
-            <label>Email</label>
+            <label>First Name</label>
             <input
               required
               autoFocus
+              name='firstname'
+              value={firstname}
+              placeholder='First Name'
+              onChange={this.handleChange}
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>Last Name</label>
+            <input
+              name='lastname'
+              value={lastname}
+              placeholder='Last Name'
+              onChange={this.handleChange}
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>Email</label>
+            <input
+              required
               name='email'
               value={email}
               placeholder='Email'
@@ -35,7 +55,7 @@ class Register extends Component {
             />
           </Form.Field>
           <Form.Field>
-            <label>Password</label>
+            <label>Password (at least 8 characters long)</label>
             <input
               required
               name='password'
