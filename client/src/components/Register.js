@@ -2,16 +2,17 @@ import React, { Component } from 'react'
 import { Button, Form, Segment, Header } from 'semantic-ui-react'
 import { handleRegister } from '../actions/auth'
 import { connect } from 'react-redux'
+// import { setFlash } from '..actions/flash'
 
 class Register extends Component {
   state = { firstname: '', lastname: '', email: '', password: '', passwordConfirmation: '' }
   handleSubmit = (e) => {
     e.preventDefault();
-    const { firstname, lastname, email, password, passwordConfirmation } = this.state;
-    if (password === passwordConfirmation)
-      this.props.dispatch(handleRegister(email, password, passwordConfirmation, this.props.history))
+    const { name, email, password, passwordConfirmation } = this.state;
+    if ((password === passwordConfirmation) && (password.length >= 8))
+      this.props.dispatch(handleRegister(email, password, passwordConfirmation, this.props.history));
     else
-      alert('Passwords Do Not Match!')
+      alert('Passwords do not match, or are too short!')
   }
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,28 +20,19 @@ class Register extends Component {
   }
 
   render() {
-    const { firstname, lastname, email, password, passwordConfirmation } = this.state;
+    const { name, email, password, passwordConfirmation } = this.state;
     return (
       <Segment basic>
         <Header as='h1' textAlign='center'>Register</Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
-            <label>First Name</label>
+            <label>Name</label>
             <input
               required
               autoFocus
-              name='firstname'
-              value={firstname}
-              placeholder='First Name'
-              onChange={this.handleChange}
-            />
-          </Form.Field>
-          <Form.Field>
-            <label>Last Name</label>
-            <input
-              name='lastname'
-              value={lastname}
-              placeholder='Last Name'
+              name='name'
+              value={name}
+              placeholder='Name'
               onChange={this.handleChange}
             />
           </Form.Field>

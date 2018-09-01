@@ -127,8 +127,7 @@ class ChangeForm extends React.Component {
         </form>
         <button
           className="invisible"
-          onClick={() => this.deleteBook(id)}
-      >
+          onClick={() => this.deleteBook(id)}>
         Delete my book.
         </button>{" "}
       </Container>
