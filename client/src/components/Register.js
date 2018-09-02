@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 // import { setFlash } from '..actions/flash'
 
 class Register extends Component {
-  state = { firstname: '', lastname: '', email: '', password: '', passwordConfirmation: '' }
+  state = { name: '', email: '', password: '', passwordConfirmation: '' }
   handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, password, passwordConfirmation } = this.state;
