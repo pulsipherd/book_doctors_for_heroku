@@ -14,7 +14,7 @@ class CreateForm extends React.Component {
   };
 
   submit = () => {
-    console.log("matthew is the greatest")
+    console.log("working on adding")
     const book = { ...this.state }
     axios.post('/api/books', book)
       .then(res => this.props.history.push('/allbooks'))
